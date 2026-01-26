@@ -136,7 +136,12 @@ img{
   <h1>Pizzeria Posillipo</h1>
   <img src="imag/imgpizza.jpeg" alt="10px">
 </header>
-
+<div class="container">
+<div class="note">
+    <strong>Pagamento anche con Bancomat!</strong><br>
+    Disponibile anche in consegna (avvisare all’ordine).
+  </div>
+</div>
 <div class="container" id="menu"></div>
 
 <div class="container">
@@ -146,11 +151,6 @@ img{
       width="100%" height="350" style="border:0" loading="lazy">
     </iframe>
   </div>
-
-  <div class="note">
-    <strong>Pagamento anche con Bancomat!</strong><br>
-    Disponibile anche in consegna (avvisare all’ordine).
-  </div>
 </div>
 
 <footer>
@@ -158,90 +158,93 @@ img{
   <a href="https://www.instagram.com/pizzeria.posillipo/" target="_blank"><br>
     Instagram @pizzeria.posillipo
   </a><br><br>
-  🕒 Lun–Dom 18:30 / 22:00
+  🕒 Lun–Dom 18:30 / 22:00 (Martedì chiuso!)
 </footer>
 
 <script>
 const menuData = {
 "Pizze Classiche":[
 ["Americana – Pom., mozz., wurstel, patatine","€7,50"],
-["Capricciosa – Pom., mozz., funghi, carciofi, cotto, olive","€8,00"],
+["Capricciosa – mozz., gamberetti, zucchine","€8,00"],
 ["Deliziosa – Pom., mozz., gorgonzola, speck","€7,50"],
 ["Diavola – Pom., mozz., salame piccante","€7,00"],
 ["Frutti di mare – Pom., mozz., frutti di mare","€9,50"],
-["Mare e monti – Pom., mozz., frutti di mare, cotto, carciofi, piselli, mais","€10,00"],
-["Margherita – Pom., mozz., basilico","€5,50"],
-["Marinara – Pom., aglio, origano","€5,00"],
-["Napoli – Pom., mozz., acciughe","€7,00"],
-["Parmigiana – Pom., mozz., melanzane, grana","€8,00"],
+["Mare e monti – Pom., mozz., pesce misto, cotto, carciofi, funghi","€10,00"],
+["Margherita – Pom., mozz.","€5,50"],
+["Marinara – Doppio Pom., aglio, origano","€5,00"],
+["Napoli – Pom., mozz., acciughe, capperi","€7,00"],
 ["Prosciutto – Pom., mozz., cotto","€7,00"],
-["Prosciutto e funghi – Pom., mozz., cotto, funghi","€8,00"],
-["Romana – Pom., mozz., acciughe","€6,00"],
-["Siciliana – Pom., mozz., melanzane","€7,00"],
+["Prosciutto e funghi – Pom., mozz., cotto, funghi","€7,50"],
+["Siciliana – Pom., acciughe, capperi, origano, cipolle","€6,50"],
 ["Speck e brie – Pom., mozz., speck, brie","€8,50"],
-["Vegetariana – Pom., mozz., verdure grigliate","€8,00"],
-["Zucca e noci – Pom., mozz., zucca, noci","€8,00"]
+["Vegetariana – Pom., mozz., verdure grigliate","€8,50"],
+["Zola e noci – Pom., mozz., zola, noci","€8,00"]
 ],
 
 "Pizze Golose":[
-["Boscaiola – mozz., salsiccia, taleggio, porcini","€9,00"],
-["Bufala – Pom., bufala, crudo","€10,00"],
-["Bufalina – Pom., bufala, rucola, grana","€9,00"],
-["Burrata e crudo – Pom., burrata, crudo","€9,50"],
-["Catto – Pom., mozz., tonno, cipolla","€8,00"],
-["Ciccio – Pom., mozz., porcini, salsiccia, taleggio, grana","€12,00"],
-["Contadina – Pom., mozz., salsiccia, grana","€8,00"],
-["Friarielli formaggi e spinata","€9,50"],
-["Friarielli salsiccia e grana","€9,00"],
-["Gustosa – Pom., mozz., speck, brie, rucola","€9,00"],
-["Mortazza – Pom., mozz., mortadella, burrata, pistacchio","€9,50"],
-["Posillipo – Pom., mozz., salame, ricotta, pesto, grana","€9,00"],
-["Romantica – Pom., mozz., salmone, stracciatella, pesto","€9,00"],
-["Totò – Pom., mozz., friarielli, salsiccia, ricotta","€9,00"],
-["Tricolore – Pom., mozz., rucola, crudo, burrata","€9,00"],
-["Vulcano – Pom., mozz., nduja, ricotta","€9,00"]
+["Parmigiana – Ragù, mozz., melanzane, grana","€8,00"],
+["Boscaiola – mozz., bresaola, taleggio, porcini","€9,00"],
+["Bufala – Pom., mozz. di bufala, ricotta dentro il cornicione","€10,00"],
+["Bufalina – Pom., mozz. di bufala","€8,00"],
+["Burrata e crudo – Pom., mozz., burrata, crudo","€9,50"],
+["Catto – mozz., cotto, panna, crocchè di patate","€9,00"],
+["Ciccio – Pom., mozz., Doppio impasto, salamino, formaggi, olive, porcini, rucola","€12,00"],
+["Contadina – mozz., salsiccia, grana, funghi","€8,50"],
+["Friarielli formaggi e spianata piccante - mozz., friarielli, formaggi misti e spianata piccante","€9,50"],
+["Friarielli salsiccia e grana - mozz., friarielli, salsiccia, grana","€9,50"],
+["Mortazza – Pom., mozz., mortadella, burrata","€9,00"],
+["Posillipo – mozz., salmone affumicato, zucchine, panna, pomodorini","€9,00"],
+["Romantica – Pom., grana, pomodorini, pesto","€8,50"],
+["Totò – mozz. di bufala, pesto, salsiccia, cornicione ripieno di ricotta","€12,00"],
+["Norvegese – mozz., salmone affumicato, panna, pomodorini","€9,00"],
+["Melani – mozz. di bufala, rucola, grana, crudo, pomodorini","€9,50"],
+["Mergellina – mozz., taleggio, porcini, crocchette di patate","€8,50"],
+["Lama – Pom., mozz., peperoni, crudo, rucola, porcini","€9,00"]
 ],
 
 "Pizze Famiglia / Metro":[
-["Margherita","€13,00"],
+["Margherita","€15,00"],
 ["Farcita classica","€20,00"],
 ["Farcita golosa","€25,00"]
 ],
 
-"Pizze Fritte":[
-["Classico – ricotta, cicoli, salame, grana","€9,00"],
-["Semplice – Pom., mozz., cotto","€8,50"],
-["Stramagiuso – mortadella, burrata, pistacchio","€9,00"]
+"Calzoni":[
+["Semplice – Pom., mozz., cotto","€7,50"],
+["Difficile – Pom., spinaci, grana, cotto","€8,50"],
 ],
 
-"Focacce":[
+"Pizze Fritte":[
+["Classico – ricotta, Pom., cotto, funghi","€9,00"],
+["Vesuvio – Pom., mozz., spianata piccante","€8,50"],
+["Formaggioso – Pom., mozz., formaggi misti","€9,00"],
+],
+
+"Focacce (si parte da €3,00 + aggiunte)":[
 ["Liscia – olio, origano, sale","€3,50"],
 ["Farcita a scelta","€5,00"]
 ],
 
 "Panuozzi":[
 ["Delicato – mozzarella, crudo, pomodorini, rucola","€8,50"],
-["Frustino – cotto, patatine, crocchè","€8,50"],
+["Frustino – cotto, mozz., patatine, crocchè","€8,50"],
 ["Gustoso – salsiccia, friarielli, provola","€9,00"]
 ],
 
 "Fritti":[
-["Patatine piccole","€2,50"],
-["Patatine grandi","€4,50"],
-["Olive ascolane","€3,50"],
-["Anelli di cipolla","€3,50"],
-["Mozzarelline panate","€3,50"],
-["Crocchè di patate","€4,00"],
-["Anelli di calamari","€7,00"]
+["Patatine piccole","€2,00"],
+["Patatine grandi","€4,00"],
+["Olive ascolane 8pz.","€3,50"],
+["Anelli di cipolla 8pz.","€3,50"],
+["Mozzarelline panate 8pz.","€3,50"],
+["Crocchè di patate 8pz.","€4,00"],
+["Anelli di calamari vasch. media","€7,00"]
 ],
 
 "Dolci":[
-["Pizza Nutella","€5,50"],
-["Altre creme","€6,50"],
+["Pizza Nutella, Pistacchi","€5,50"],
 ["Bacetti piccoli","€4,50"],
 ["Bacetti grandi","€7,50"],
-["Tiramisù","€3,50"],
-["Nutellino","€3,50"]
+["Fritelline porzione media - 45pz.","€6,50"]
 ],
 
 "Extra":[
