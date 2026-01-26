@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzeria Posillipo</title>
+
+<style>
+:root{
+  --nero:#0f0d0d;
+  --crema:#f7f3e9;
+  --oro:#6c6c6c;
+  --vino:#333;
+  --salvia:#6b8f71;
+  --ombra:rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:
+    linear-gradient(rgba(197, 197, 197, 0.94)),
+    url("WhatsApp Image 2026-01-26 at 07.37.20.jpeg") center/320px no-repeat fixed;
+}
+
+header{
+  background:var(--nero);
+  color:var(--crema);
+  padding:45px 20px;
+  text-align:center;
+  border-bottom:4px solid var(--oro);
+}
+
+header h1{
+  color:var(--oro);
+  font-size:3em;
+  margin:0;
+}
+
+header a{
+  color:#4da6ff;
+  display:block;
+  margin-top:10px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:30px;
+}
+
+.accordion{
+  margin-top:40px;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 4px 12px var(--ombra);
+}
+
+.accordion-header{
+  background:var(--vino);
+  color:white;
+  padding:18px 22px;
+  font-size:1.6em;
+  font-weight:700;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.accordion-content{
+  display:none;
+  background:white;
+  padding:20px;
+}
+
+.accordion-content ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.accordion-content li{
+  padding:14px 18px;
+  margin-bottom:12px;
+  border-radius:12px;
+  box-shadow:0 3px 10px var(--ombra);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-left:5px solid var(--oro);
+}
+
+.price{
+  font-weight:700;
+  color:var(--salvia);
+}
+
+.note{
+  background:#6c6c6c;
+  margin-top:50px;
+  padding:30px;
+  border-left:6px solid var(--vino);
+  border-radius:12px;
+}
+
+.map{
+  margin-top:60px;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 4px 14px var(--ombra);
+}
+
+footer{
+  background:var(--nero);
+  color:var(--crema);
+  text-align:center;
+  padding:40px;
+  margin-top:80px;
+  border-top:4px solid var(--oro);
+}
+
+footer a{color:#4da6ff}
+
+img{
+  border-radius: 10%;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Pizzeria Posillipo</h1>
+  <img src="/imag/imgpizza.jpeg" alt="10px">
+</header>
+
+<div class="container" id="menu"></div>
+
+<div class="container">
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps?q=Via%20Donizetti%208%20Dalmine&output=embed"
+      width="100%" height="350" style="border:0" loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="note">
+    <strong>Pagamento anche con Bancomat!</strong><br>
+    Disponibile anche in consegna (avvisare all’ordine).
+  </div>
+</div>
+
+<footer>
+  <strong>📞 375.580.67.55</strong><br>
+  <a href="https://www.instagram.com/pizzeria.posillipo/" target="_blank"><br>
+    Instagram @pizzeria.posillipo
+  </a><br><br>
+  🕒 Lun–Dom 18:30 / 22:00
+</footer>
+
+<script>
+const menuData = {
+"Pizze Classiche":[
+["Americana – Pom., mozz., wurstel, patatine","€7,50"],
+["Capricciosa – Pom., mozz., funghi, carciofi, cotto, olive","€8,00"],
+["Deliziosa – Pom., mozz., gorgonzola, speck","€7,50"],
+["Diavola – Pom., mozz., salame piccante","€7,00"],
+["Frutti di mare – Pom., mozz., frutti di mare","€9,50"],
+["Mare e monti – Pom., mozz., frutti di mare, cotto, carciofi, piselli, mais","€10,00"],
+["Margherita – Pom., mozz., basilico","€5,50"],
+["Marinara – Pom., aglio, origano","€5,00"],
+["Napoli – Pom., mozz., acciughe","€7,00"],
+["Parmigiana – Pom., mozz., melanzane, grana","€8,00"],
+["Prosciutto – Pom., mozz., cotto","€7,00"],
+["Prosciutto e funghi – Pom., mozz., cotto, funghi","€8,00"],
+["Romana – Pom., mozz., acciughe","€6,00"],
+["Siciliana – Pom., mozz., melanzane","€7,00"],
+["Speck e brie – Pom., mozz., speck, brie","€8,50"],
+["Vegetariana – Pom., mozz., verdure grigliate","€8,00"],
+["Zucca e noci – Pom., mozz., zucca, noci","€8,00"]
+],
+
+"Pizze Golose":[
+["Boscaiola – mozz., salsiccia, taleggio, porcini","€9,00"],
+["Bufala – Pom., bufala, crudo","€10,00"],
+["Bufalina – Pom., bufala, rucola, grana","€9,00"],
+["Burrata e crudo – Pom., burrata, crudo","€9,50"],
+["Catto – Pom., mozz., tonno, cipolla","€8,00"],
+["Ciccio – Pom., mozz., porcini, salsiccia, taleggio, grana","€12,00"],
+["Contadina – Pom., mozz., salsiccia, grana","€8,00"],
+["Friarielli formaggi e spinata","€9,50"],
+["Friarielli salsiccia e grana","€9,00"],
+["Gustosa – Pom., mozz., speck, brie, rucola","€9,00"],
+["Mortazza – Pom., mozz., mortadella, burrata, pistacchio","€9,50"],
+["Posillipo – Pom., mozz., salame, ricotta, pesto, grana","€9,00"],
+["Romantica – Pom., mozz., salmone, stracciatella, pesto","€9,00"],
+["Totò – Pom., mozz., friarielli, salsiccia, ricotta","€9,00"],
+["Tricolore – Pom., mozz., rucola, crudo, burrata","€9,00"],
+["Vulcano – Pom., mozz., nduja, ricotta","€9,00"]
+],
+
+"Pizze Famiglia / Metro":[
+["Margherita","€13,00"],
+["Farcita classica","€20,00"],
+["Farcita golosa","€25,00"]
+],
+
+"Pizze Fritte":[
+["Classico – ricotta, cicoli, salame, grana","€9,00"],
+["Semplice – Pom., mozz., cotto","€8,50"],
+["Stramagiuso – mortadella, burrata, pistacchio","€9,00"]
+],
+
+"Focacce":[
+["Liscia – olio, origano, sale","€3,50"],
+["Farcita a scelta","€5,00"]
+],
+
+"Panuozzi":[
+["Delicato – mozzarella, crudo, pomodorini, rucola","€8,50"],
+["Frustino – cotto, patatine, crocchè","€8,50"],
+["Gustoso – salsiccia, friarielli, provola","€9,00"]
+],
+
+"Fritti":[
+["Patatine piccole","€2,50"],
+["Patatine grandi","€4,50"],
+["Olive ascolane","€3,50"],
+["Anelli di cipolla","€3,50"],
+["Mozzarelline panate","€3,50"],
+["Crocchè di patate","€4,00"],
+["Anelli di calamari","€7,00"]
+],
+
+"Dolci":[
+["Pizza Nutella","€5,50"],
+["Altre creme","€6,50"],
+["Bacetti piccoli","€4,50"],
+["Bacetti grandi","€7,50"],
+["Tiramisù","€3,50"],
+["Nutellino","€3,50"]
+],
+
+"Extra":[
+["Aggiunta ingredienti","+€1,00"],
+["Bufala / burrata / porcini","+€2,00"],
+["Mozzarella senza lattosio","+€2,00"],
+["Doppio impasto","+€2,00"],
+["Cornicione ripieno","+€2,00"],
+["Pizza baby","-€1,00"]
+],
+
+"Consegna":[
+["Disponibile dalle 19:00",""],
+["Comune di Dalmine","€1,00"],
+["Comuni limitrofi","€2,00"]
+]
+};
+
+const menu = document.getElementById("menu");
+
+Object.entries(menuData).forEach(([categoria,items])=>{
+  const acc=document.createElement("div");
+  acc.className="accordion";
+  acc.innerHTML=`
+    <div class="accordion-header">${categoria}<span>▼</span></div>
+    <div class="accordion-content">
+      <ul>${items.map(i=>`<li>${i[0]}<span class="price">${i[1]}</span></li>`).join("")}</ul>
+    </div>`;
+  acc.querySelector(".accordion-header").onclick=()=>{
+    const c=acc.querySelector(".accordion-content");
+    c.style.display=c.style.display==="block"?"none":"block";
+  };
+  menu.appendChild(acc);
+});
+</script>
+
+</body>
+</html>
